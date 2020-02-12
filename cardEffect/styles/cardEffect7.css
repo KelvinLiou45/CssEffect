@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.template {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template .card {
+    width: 20%;
+    height: 60%;
+    /* background: white; */
+    margin: 10px;
+    position:relative;
+    margin:0 auto;
+}
+
+.template .card .card_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    height: 50%;
+    position: absolute;;
+    width:100%;
+    top:25%;
+    z-index:10;
+    transition:0.5s;
+}
+.template .card:hover .card_top {
+    top:0;
+}
+
+.template .card:nth-child(1) .card_top {
+    background:#3b5998;
+    color:white;
+}
+.template .card:nth-child(2) .card_top {
+    background:#dc4e41;
+    color:white;
+}
+.template .card:nth-child(3) .card_top {
+    background:#6a453b;
+    color:white;
+}
+
+.template .card .card_top h1 {
+    margin: 0;
+    font-family: 'Ubuntu';
+    font-size:20px;
+}
+
+.template .card .card_top img {
+    height: 80px;
+    width: 80px;
+    margin-bottom:20px;
+}
+
+.template .card .card_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    height: 50%;
+    position:absolute;
+    width:100%;
+    bottom:25%;
+    background:#fff;
+    box-sizing:border-box;
+    transition:0.5s;
+}
+.template .card:hover .card_bottom{
+    bottom:0;
+}
+
+.template .card .card_bottom p {
+    margin: 0 20px 10px;
+}
+
+.template .card .card_bottom button {
+    margin: 0 20px;
+    width: 30%;
+    border: 1px solid gray;
+    background: none;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.template .card .card_bottom button:hover {
+    background:gray;
+    color:white;
+}

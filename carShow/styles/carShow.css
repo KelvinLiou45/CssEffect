@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.templete {
+    position:relative;
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    background:#000;
+}
+
+.templete .shower {
+    position:relative;
+    flex-grow: 2;
+    display:flex;
+    overflow: hidden;
+    transition:1s;
+    background:#000;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+.templete .shower .shower_message {
+    position:absolute;
+    background:white;
+    width:400px;
+    height:auto;
+    padding:40px;
+    transform:translateX(100%);
+    transition:0.3s;
+}
+
+.templete .shower .shower_message h3{
+    color:red;
+    margin-bottom:5px;
+    padding:5px 0;
+}
+.templete:hover .shower{
+    opacity:0.1;
+}
+.templete .shower:hover{
+    flex-grow: 5;
+    opacity:1;
+}
+.templete .shower:hover .shower_message {
+    transform:translateX(0);
+    transition-delay: 1s;
+}
+.templete .shower:nth-child(1){
+    background: url("../image/carShow/redCar.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.templete .shower:nth-child(2){
+    background: url("../image/carShow/blueCar.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.templete .shower:nth-child(3){
+    background: url("../image/carShow/blackCar.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}

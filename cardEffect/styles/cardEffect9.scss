@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+$big_font:22px;
+$middle_font:20px;
+$small_font:15px;
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-size: $small_font;
+    background:#262626;
+    transition:0.5s;
+    font-family: 'PT Sans', sans-serif;
+    .container{
+        width:100%;
+        margin:50px 0 ;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        flex-wrap:wrap;
+        .space{
+            margin:15px auto;
+            position:relative;
+            height:0px;
+            width:300px;
+        }
+        .card{
+            margin:15px auto;
+            position:relative;
+            height:450px;
+            width:300px;
+            box-sizing:border-box;
+            box-shadow:0 5px 25px rgba(0,0,0,0.8);
+            overflow: hidden;
+            .imgBx{
+                position:absolute;
+                width:100%;
+                transform:translateY(0);
+                transition:0.5s;
+                img{
+                    width:100%;
+                    filter: blur(0px);
+                    transition:0.5s;
+                }
+            }
+            &:hover .imgBx{
+                transform:translateY(-60px);
+            } 
+            &:hover .imgBx img{
+                filter: blur(5px);
+            } 
+            .black_bg{
+                position:absolute;
+                width:100%;
+                height:100%;
+                bottom:0;
+                transform:translateY(100px);
+                transition:0.5s;
+                background:linear-gradient(transparent,black 50%);
+            }
+            &:hover .black_bg{
+                transform:translateY(0);
+            } 
+            .detail{
+                position:absolute;
+                z-index:1;
+                padding:15px;
+                bottom:0;
+                transform:translateY(240px);
+                transition:0.5s;
+                div{
+                    margin-bottom:5px;
+                }
+                .movie_nameAndYear{
+                    color:white;
+                    font-weight:bold;
+                    font-size: $big_font;
+                }
+                .movie_directed{
+                    color:orange;
+                    font-weight:bold;
+                    font-size:$small_font;
+                }
+                .movie_star{
+                    color:yellow;
+                    span{
+                        color:white;
+                    }
+                }
+                .movie_type{
+                    color:white;
+                    margin:10px 0;
+                    font-weight: bold;
+                    span{
+                        display: inline-block;
+                        padding:3px;
+                        border-radius:2px;
+                    }
+                    .action{
+                        background:red;
+                    }
+                    .adventure{
+                        background:orange;
+                    }
+                }
+                .movie_content{
+                    color:#fff;
+                    margin:15px 0 ;
+                }
+                .movie_cast{
+                    color:yellow;
+                    font-size: 20px;
+                    font-weight: bold;
+                    width:100%;
+                    p{
+                        margin-bottom:5px;
+                    }
+                    .movie_cast_imgBx{
+                        display: flex;
+                        justify-content:left;
+                        .cast_imgBx{
+                            width:50px;
+                            height:50px;
+                            margin-right:5px;
+                            // background:red;
+                            border-radius:50%;
+                            border:2px solid white;
+                            overflow:hidden;
+                            img{
+                                width:100%;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover .detail{
+                transform:translateY(0);
+            } 
+        }
+        .card_checked{
+            
+        }
+    }
+    .background_pic{
+        height:100%;
+        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -3;
+        img{
+            width:100%;
+            transition:0.5s;
+            filter:sepia(1);
+        }
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/galleryEffect.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="gallery">
+            <img src="image/galleryEffect/1.jpg" alt="">
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="image/galleryEffect/1.jpg">
+                        <img src="image/galleryEffect/1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="image/galleryEffect/2.jpg">
+                        <img src="image/galleryEffect/2.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="image/galleryEffect/3.jpg">
+                        <img src="image/galleryEffect/3.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="image/galleryEffect/4.jpg">
+                        <img src="image/galleryEffect/4.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="image/galleryEffect/5.jpg">
+                        <img src="image/galleryEffect/5.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="image/galleryEffect/6.jpg">
+                        <img src="image/galleryEffect/6.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.container .list ul li a').click(function(e){
+                e.preventDefault();
+                //console.log($(this).attr('href'));
+                $('.gallery img').attr('src',$(this).attr('href'));
+            });
+        })
+    </script>
+</body>
+
+</html>

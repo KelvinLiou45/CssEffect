@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/scrollEffect.css">
+</head>
+
+<body>
+    <section class="longDark"></section>
+    <section class="content">
+        <h1>How to make Scroll Effect</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus architecto totam molestiae
+            voluptate alias numquam hic iusto ut, at labore quidem quia, sequi repellat tempora eveniet illum quasi!
+            Minima!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, dolores corrupti! Distinctio minima odio
+            voluptatem soluta odit inventore nam repudiandae, qui laudantium nihil dicta hic accusamus ad maiores
+            reprehenderit aspernatur!</p>
+        <br>
+        <a href="#">Read More</a>
+    </section>
+    <section class="longDark2"></section>
+    <section class="content">
+        <h1>How to make Scroll Effect</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus architecto totam molestiae
+            voluptate alias numquam hic iusto ut, at labore quidem quia, sequi repellat tempora eveniet illum quasi!
+            Minima!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, dolores corrupti! Distinctio minima odio
+            voluptatem soluta odit inventore nam repudiandae, qui laudantium nihil dicta hic accusamus ad maiores
+            reprehenderit aspernatur!</p>
+        <br>
+        <a href="#">Read More</a>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            let scroll_position = $(window).scrollTop() / 4;
+            let scroll_position2 = $(window).scrollTop() / 4 - 450;
+            // console.log('scroll:'+scroll_position);
+            $('.longDark').css({
+                'background-position-x': -scroll_position + "px"
+            })
+            $('.longDark2').css({
+                'background-position-x': -scroll_position2 + "px"
+            })
+        });
+    </script>
+</body>
+
+</html>

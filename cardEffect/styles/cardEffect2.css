@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    height:100vh;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.container .card{
+    position:relative;
+    background:white;
+    padding:20px;
+    margin:0 50px;
+    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.container .card::before{
+    content:' ';
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:50%;
+    background:rgba(255,255,255,0.3);
+}
+
+.container .card::after{
+    content: url(../image/cardEffect2/quote.png);
+    position:absolute;
+    bottom:10%;
+    right:10%;
+    opacity: .3;
+}
+
+.container .card p{
+    
+}
+
+.container .card h3{
+    margin-top:200px;
+    text-align: right;
+}
+
+.container .bg{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    height:100%;
+    width:100%;
+    background:#fff;
+    pointer-events: none;
+    z-index:-1;
+    transition:0.5s;
+}
+
+.container .card.card1:hover{
+    background:linear-gradient(rgb(0, 110, 255),rgb(255, 0, 128));
+    color:white;
+}
+
+.container .card.card1:hover ~ .bg{
+    opacity: 1;
+    background:linear-gradient(rgb(0, 110, 255),rgb(255, 0, 128));
+}
+
+.container .card2:hover {
+    background:linear-gradient(rgb(255, 251, 0),rgb(0, 255, 0));
+    color:white;
+}
+
+.container .card.card2:hover ~ .bg{
+    opacity: 1;
+    background:linear-gradient(rgb(255, 251, 0),rgb(0, 255, 0));
+}
+
+.container .card3:hover {
+    background:linear-gradient(rgb(255, 153, 0),rgb(255, 0, 212));
+    color:white;
+}
+
+.container .card.card3:hover ~ .bg{
+    opacity: 1;
+    background:linear-gradient(rgb(255, 153, 0),rgb(255, 0, 212));
+}

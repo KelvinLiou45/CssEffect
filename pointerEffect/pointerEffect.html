@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/pointerEffect.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="pointer"></div>
+        <h1>Black & White</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta sed ad est expedita deserunt ea quas, autem
+            eum quis rerum provident neque enim! Natus suscipit, consequuntur consequatur pariatur sapiente
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus fugiat illum beatae mollitia! Ut fuga
+            veritatis tempora corporis, aliquam voluptatibus omnis dolorum soluta aperiam velit voluptate excepturi
+            nobis illo exercitationem.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus, ut atque repudiandae cum accusamus
+            non aspernatur quia nihil est iure, rem aut aliquam praesentium! Rem aperiam minima minus pariatur!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores laborum eligendi corporis quibusdam
+            voluptates modi quaerat maxime? Perferendis molestiae eos ad at ducimus soluta id iusto? Cupiditate
+            distinctio tempora qui?
+        </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).mousemove(function(e){
+            $('.pointer').css({left:e.pageX,top:e.pageY});
+        });
+    </script>
+</body>
+
+</html>

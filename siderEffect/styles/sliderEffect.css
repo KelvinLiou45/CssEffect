@@ -1,0 +1,53 @@
+body {
+    background: #262626;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background: white;
+    overflow: hidden;
+}
+
+.detail {
+    height: 100%;
+    width: 100%;
+}
+
+.detail img {
+    height: 100%;
+}
+
+.detail .content {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.detail .content h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.detail .content p {
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+    color: rgb(255, 99, 42);
+    font-weight: bold;
+}

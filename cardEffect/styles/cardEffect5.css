@@ -1,0 +1,61 @@
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:black;
+}
+.container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.container .card{
+    position:relative;
+    width:15%;
+    height:500px;
+    background:red;
+    overflow: hidden;
+    transition:0.5s;
+}
+.container .card::before{
+    content:'';
+    position:absolute;
+    width:50%;
+    height:100%;
+    top:-100%;
+    left:0;
+    background:black;
+    transition:0.5s;
+}
+.container:hover .card::before{
+    top:0;
+}
+.container .card:hover::before{
+    top:-100%;
+}
+.container .card::after{
+    content:'';
+    position:absolute;
+    width:50%;
+    height:100%;
+    bottom:-100%;
+    right:0;
+    background:black;
+    transition:0.5s;
+}
+.container:hover .card::after{
+    bottom:0;
+    transition-delay:0.5s;
+}
+.container .card:hover::after{
+    bottom:-100%;
+    transition-delay:0.5s;
+}
+.container .card img{
+    height:100%;
+}
